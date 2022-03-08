@@ -1,6 +1,6 @@
 {
     "name": "my-awesome-app-jbp",
-    "version": "0.2.1",
+    "version": "0.2.0",
     "description": "Hello World in Node Express",
     "main": "app.js",
     "scripts": {
