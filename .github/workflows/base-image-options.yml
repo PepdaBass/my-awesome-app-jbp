@@ -36,11 +36,15 @@ jobs:
         run: |
           ls
           echo
-          java --version
+          java -version
           echo
           git --version
           echo
-          mvn -v gradle -v ant -v
+          mvn -v
+          echo
+          gradle -v
+          echo
+          ant -v
           echo
           echo $ANDROID_SDK_ROOT
           echo
