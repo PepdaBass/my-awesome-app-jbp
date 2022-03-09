@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      -name: Env variables
+      - name: Env variables
         -run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
       
       - name: Run docker compose on dev files
