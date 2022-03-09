@@ -4,6 +4,7 @@ services:
 
   my-awesome-app-jbp-dev:
     container_name: my-awesome-app-jbp-dev
+    image: pepdabass/my-awesome-app-jbp
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -15,7 +16,7 @@ services:
 
   my-awesome-app-jbp-test:
     container_name: my-awesome-app-jbp-test
-    image: pepdabass/my-awesome-app-jbp-dev
+    image: my-awesome-app-jbp-dev
     build:
       context: .
       dockerfile: Dockerfile.dev
