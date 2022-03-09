@@ -4,8 +4,7 @@
     "description": "Hello World in Node Express",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js",
-        "build": "react-scripts build"
+        "start": "node app.js"
     },
     "author": "Jeffrey Peplinski",
     "license": "ISC",
