@@ -16,6 +16,9 @@ services:
   my-awesome-app-jbp-test:
     container_name: my-awesome-app-jbp-test
     image: my-awesome-app-jbp_my-awesome-app-jbp-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     volumes:
       - .:/app
       - "/app/node_modules"
