@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
     
       - name: Push Docker Image to Docker Hub
-        run: docker push --all -tags pepdabass/my-awesome-app-jbp-dev
+        run: docker push --all-tags pepdabass/my-awesome-app-jbp-dev
