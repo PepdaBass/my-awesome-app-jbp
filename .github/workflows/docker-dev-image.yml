@@ -27,7 +27,7 @@ jobs:
         run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
 
       - name: Build the Docker Image
-        run: docker build . --file Dockerfile.dev -- tag pepdabass/my-awesome-app-jbp:latest
+        run: docker build . --file Dockerfile.dev --tag pepdabass/my-awesome-app-jbp:latest
 
       - name: Add "date-stamp" tag to the image
         run: docker image tag pepdabass/my-awesome-app-jbp-dev:latest pepdabass/my-awesome-app-jbp-dev:${{env.date-stamp}}
