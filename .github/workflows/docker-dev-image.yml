@@ -23,13 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      name: env variables
-      run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
+      - name: env variables
+        run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
       
-      name: Build the Docker Image
-      run: build . --file Dockerfile --tag pepdabass/my-awesome-app-jbp:latest
+      - name: Build the Docker Image
+        run: build . --file Dockerfile --tag pepdabass/my-awesome-app-jbp:latest
       
-      name: Add "date-stamp" tag to the image
-      run: docker image tag pepdabass/my-awesome-app-jbp:latest pepdabass/my-awesome-app-jbp:${{env.date-stamp}}
+      - name: Add "date-stamp" tag to the image
+        run: docker image tag pepdabass/my-awesome-app-jbp:latest pepdabass/my-awesome-app-jbp:${{env.date-stamp}}
 
     
