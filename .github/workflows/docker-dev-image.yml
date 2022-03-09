@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Env variables
-        -run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
+        run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
       
       - name: Run docker compose on dev files
         run: docker-compose -f "docker-compose-dev.yml" up -d --tag --build my-awesome-app-jbp-dev:latest
