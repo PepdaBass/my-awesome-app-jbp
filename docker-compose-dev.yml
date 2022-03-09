@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+
+  my-awesome-app-jbp-dev:
+    container_name: my-awesome-app-jbp-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - "/app/node_modules"
+    ports:
+      - "3002:3000"
+
+  my-awesome-app-jbp-test:
+    container_name: my-awesome-app-jbp-test
+    image: my-awesome-app-jbp_my-awesome-app-jbp-dev
+    volumes:
+      - .:/app
+      - "/app/node_modules"
+    command: ["npm", "run", "test"]

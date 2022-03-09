@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       
       name: env variables
-      run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB
+      run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB_ENV
       
       name: Build the Docker Image
       run: build . --file Dockerfile --tag pepdabass/my-awesome-app-jbp:latest
