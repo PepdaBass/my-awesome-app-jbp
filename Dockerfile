@@ -1,12 +1,13 @@
-FROM node:10 as build
+FROM node:10
+
 WORKDIR /app
+
 COPY package*.json ./
 RUN npm ci
+
 COPY ./ ./
-RUN npm run build
 
+ENV APP_PORT 8080
+EXPOSE 8080
 
-FROM nginx:10 as prod
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "app.js"]
