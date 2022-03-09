@@ -34,13 +34,13 @@ jobs:
     # Runs a set of commands using the runners shell
       - name: Multi-line
         run: |
-          echo ls
+          ls
           echo
-          echo java --version
+          java --version
           echo
-          echo git --version
+          git --version
           echo
-          echo mvn -v gradle -v ant -v
+          mvn -v gradle -v ant -v
           echo
           echo $ANDROID_SDK_ROOT
           echo
@@ -48,8 +48,8 @@ jobs:
           echo
           echo $RUNNER_WORKSPACE
           echo
-          echo whoami
+          whoami
           echo
-          echo df
+          df
           echo
-          echo env -0 | sort -z | tr '\0''\n'
+          env -0 | sort -z | tr '\0' '\n'
