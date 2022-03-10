@@ -3,9 +3,6 @@ version: '3.9'
 services:
   my-awesome-app:
     container_name: my-awesome-app-jbp
-    build:
-      context: ./
-      dockerfile: Dockerfile
     ports:
       - "80:8080"
     command: ["node", "app.js"]
