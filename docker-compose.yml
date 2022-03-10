@@ -2,7 +2,8 @@ version: '3.9'
 
 services:
   my-awesome-app:
-    container_name: my-awesome-app-jbp
+    container_name: my-awesome-app-jbp-aws
+    image: pepdabass/my-awesome-app-jbp:latest
     ports:
       - "80:8080"
     command: ["node", "app.js"]
